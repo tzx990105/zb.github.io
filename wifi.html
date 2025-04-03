@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>连接 QUT-POL WiFi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .wifi-box { background: #f5f5f5; padding: 15px; border-radius: 10px; }
+        button { background: #007AFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>连接 QUT-POL WiFi</h1>
+    <div class="wifi-box">
+        <p><strong>WiFi 名称:</strong> QUT-POL</p>
+        <p><strong>账号:</strong> 202323010261</p>
+        <p><strong>密码:</strong> 15732919567Zb!</p>
+    </div>
+    <button onclick="openWifiSettings()">前往 WiFi 设置</button>
+    <p>请在 WiFi 列表中选择 <strong>QUT-POL</strong>，并输入账号和密码</p>
+
+    <script>
+        function openWifiSettings() {
+            // iOS 14+ 支持直接跳转 WiFi 设置
+            window.location.href = "App-Prefs:WIFI";
+            
+            // 如果跳转失败，提示手动操作
+            setTimeout(function() {
+                alert("如果未自动跳转，请手动前往「设置 > WiFi」");
+            }, 500);
+        }
+    </script>
+</body>
+</html>
